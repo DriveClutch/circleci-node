@@ -10,6 +10,9 @@ if [[ -x "tools/build.sh" ]]; then
 	exit $?
 fi
 
+# Ensure the bintray credentials exist
+/tools/write_bintray_creds.sh
+
 npm install
 
 gulp
