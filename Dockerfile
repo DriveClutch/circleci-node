@@ -9,6 +9,13 @@ RUN apt-get update \
 	  python-dev \
 	  python-pip \
       lsb-release \
+      xvfb \
+      libgtk-3-dev \
+      libnotify-dev \
+      libgconf-2-4 \
+      libnss3 \
+      libxss1 \
+      libasound2 \
 	&& npm install -g gulp \
     && export DOCKER_VERSION=$(curl --silent --fail --retry 3 https://download.docker.com/linux/static/stable/x86_64/ | grep -o -e 'docker-[.0-9]*-ce\.tgz' | sort -r | head -n 1) \
     && DOCKER_URL="https://download.docker.com/linux/static/stable/x86_64/${DOCKER_VERSION}" \
