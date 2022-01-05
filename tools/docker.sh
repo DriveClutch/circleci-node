@@ -30,7 +30,8 @@ function setup_ecr_repo() {
           "arn:aws:iam::693451398936:root",
           "arn:aws:iam::183927706744:root",
           "arn:aws:iam::498325764466:root",
-          "arn:aws:iam::597078432132:root"
+          "arn:aws:iam::597078432132:root",
+          "arn:aws:iam::458132236648:user/circleci"
         ]
       },
       "Action": [
