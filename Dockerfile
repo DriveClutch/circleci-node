@@ -1,4 +1,4 @@
-FROM node:14.7.0
+FROM node:14.16.0
 
 RUN apt-get update \
     && apt-get install -y \
