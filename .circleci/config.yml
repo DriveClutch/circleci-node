@@ -12,3 +12,19 @@ workflows:
           path: ./
           repo: $CIRCLE_BRANCH/$CIRCLE_PROJECT_REPONAME
           tag: latest,$CIRCLE_SHA1
+          filters:
+            branches:
+              ignore:
+                - node-16
+      - aws-ecr/build-and-push-image:
+          context: org-global
+          create-repo: true
+          dockerfile: Dockerfile
+          no-output-timeout: 20m
+          path: ./
+          repo: $CIRCLE_BRANCH/$CIRCLE_PROJECT_REPONAME
+          tag: node16,$CIRCLE_SHA1
+          filters:
+            branches:
+              only:
+                - node-16
