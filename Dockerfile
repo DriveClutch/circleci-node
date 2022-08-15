@@ -1,4 +1,4 @@
-FROM node:14.7.0
+FROM node:16.16.0
 
 RUN apt-get update \
     && apt-get install -y \
@@ -11,6 +11,7 @@ RUN apt-get update \
       lsb-release \
       shellcheck \
       bats \
+    && npm install -g npm@8.11.0
 	&& npm install -g gulp \
 	&& npm i -g pnpm \
     && export DOCKER_VERSION=$(curl --silent --fail --retry 3 https://download.docker.com/linux/static/stable/x86_64/ | grep -o -e 'docker-[.0-9]*-ce\.tgz' | sort -r | head -n 1) \

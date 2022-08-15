@@ -11,7 +11,7 @@ if [[ -x "tools/build.sh" ]]; then
 fi
 
 # Ensure the bintray credentials exist
-/tools/write_bintray_creds.sh
+/tools/write_creds.sh
 
 npm install
 
